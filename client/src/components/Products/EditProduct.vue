@@ -114,6 +114,7 @@
 												Please select a category
 											</option>
 											<option value="Tea">Tea</option>
+											<option value="Milk">Milk</option>
 											<option value="Coffee">Coffee</option>
 											<option value="Smoothie">Smoothie</option>
 											<option value="Soda">Soda</option>

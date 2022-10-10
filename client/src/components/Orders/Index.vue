@@ -17,7 +17,7 @@
 
 		<div class="container-fluid">
 			<div v-for="order in orders" v-bind:key="order.id" class="blog-list">
-				<table class="table table-bordered">
+				<table class="table table-sm">
 					<thead class="thead-light">
 						<tr>
 							<th scope="col">id</th>
@@ -25,7 +25,6 @@
 							<th scope="col">Quality</th>
 							<th scope="col">Size</th>
 							<th scope="col">Sweet Level</th>
-							<th scope="col">Time</th>
 							<th scope="col">Tools</th>
 						</tr>
 					</thead>
@@ -50,11 +49,7 @@
 						<th width="10%">
 							{{ order.sweet }}
 						</th>
-						<th width="15%">
-							<i class="far fa-clock" style="font-size: 20px; color: red"></i>
 
-							{{ order.updatedAt }}
-						</th>
 						<th width="13%">
 							<button
 								class="btn btn-primary"
