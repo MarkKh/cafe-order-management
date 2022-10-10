@@ -25,8 +25,8 @@
 											required
 										>
 											<option disabled value="">Choose a product</option>
-											<option v-for="blog in blogs" v-bind:key="blog.id">
-												{{ blog.title + "  " + blog.content + "  Baht" }}
+											<option v-for="product in products" v-bind:key="product.id">
+												{{ product.name + "  " + product.price + "  Baht" }}
 											</option>
 										</select>
 									</div>
@@ -88,7 +88,7 @@
 							>
 								<div class="blog-tab"><h5>ordering details</h5></div>
 								<p class="font3" style="margin-top: 10px">
-									Product name: {{ order.product_name }}<br />
+									products name: {{ order.products_name }}<br />
 									Quantity: {{ order.quantity }} <br />
 									Size : {{ order.size }} <br />
 									Sweet level : {{ order.sweet }}
@@ -126,15 +126,15 @@
   <script>
 import { mapState } from "vuex";
 import OrderService from "@/services/OrderService";
-import BlogsService from "@/services/BlogsService";
+import productsService from "@/services/ProductService";
 
 export default {
   data() {
     return {
-      blogs: [],
+      products: [],
       order: {
 				quantity: "",
-				product_name: "",
+				products_name: "",
 				size: "",
 				sweet: "",
 				status: "pending",
@@ -163,7 +163,7 @@ export default {
     try {
       let orderId = this.$route.params.orderId;
       this.order = (await OrderService.show(orderId)).data;
-      this.blogs = (await BlogsService.index()).data;
+      this.products = (await productsService.index()).data;
     } catch (error) {
       console.log(error);
     }
