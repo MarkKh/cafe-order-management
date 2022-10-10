@@ -46,7 +46,7 @@
 									</div>
 								</div>
 								<br />
-								<label for="exampleInputEmail1">Book picture</label>
+								<label for="exampleInputEmail1">Product picture</label>
 								<div class="product-tab">
 									<transition name="fade">
 										<div

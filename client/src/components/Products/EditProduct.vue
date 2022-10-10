@@ -42,6 +42,9 @@
 										/>
 									</div>
 								</div>
+								<br>
+								<label for="exampleInputEmail1">Product picture</label>
+
 								<transition name="fade">
 									<div class="thumbnail-pic" v-if="product.thumbnail != 'null'">
 										<img :src="BASE_URL + product.thumbnail" alt="thumbnail" />
