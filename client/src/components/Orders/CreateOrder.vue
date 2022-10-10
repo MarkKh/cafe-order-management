@@ -127,7 +127,7 @@
   <script>
 import { mapState } from "vuex";
 import OrderService from "@/services/OrderService";
-import BlogsService from "@/services/BlogsService";
+import ProductService from "@/services/ProductService";
 
 export default {
 	data() {
@@ -167,7 +167,7 @@ export default {
 		},
 	},
 	async created() {
-		this.blogs = (await BlogsService.index()).data;
+		this.products = (await ProductService.index()).data;
 	},
 	async refreshData() {
 		this.orders = (await OrderService.index()).data;

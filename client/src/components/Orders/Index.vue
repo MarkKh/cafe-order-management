@@ -18,6 +18,17 @@
 		<div class="container-fluid">
 			<div v-for="order in orders" v-bind:key="order.id" class="blog-list">
 				<table class="table table-bordered">
+					<thead class="thead-light">
+						<tr>
+							<th scope="col">id</th>
+							<th scope="col">Product</th>
+							<th scope="col">Quality</th>
+							<th scope="col">Size</th>
+							<th scope="col">Sweet Level</th>
+							<th scope="col">Time</th>
+							<th scope="col">Tools</th>
+						</tr>
+					</thead>
 					<tbody>
 						<th width="3%">
 							<center>{{ order.id }}</center>
@@ -30,31 +41,30 @@
 							>&nbsp;
 							{{ order.product_name }}
 						</th>
-						<th width="8%">
-							<span style="color: red">Quantity : </span>{{ order.quantity }}
+						<th width="5%">
+							{{ order.quantity }}
+						</th>
+						<th width="5%">
+							{{ order.size }}
 						</th>
 						<th width="10%">
-							<span style="color: yellowgreen">Size : </span>{{ order.size }}
-						</th>
-						<th width="10%">
-							<span style="color: green">Sweet : </span>{{ order.sweet }}
+							{{ order.sweet }}
 						</th>
 						<th width="15%">
 							<i class="far fa-clock" style="font-size: 20px; color: red"></i>
 
-							<span style="color: purple"></span>{{ order.updatedAt }}
+							{{ order.updatedAt }}
 						</th>
-						<th width="15%">
+						<th width="13%">
 							<button
-								class="btn btn-primary btn-lg"
+								class="btn btn-primary"
 								v-on:click="navigateTo('/order/edit/' + order.id)"
-							><i class='fas fa-edit'></i>
+							>
+								<i class="fas fa-edit"></i>
 								Edit
 							</button>
-							<button
-								class="btn btn-danger btn-lg"
-								v-on:click="deleteOrder(order)"
-							><i class='fas fa-trash-alt'></i>
+							<button class="btn btn-danger" v-on:click="deleteOrder(order)">
+								<i class="fas fa-trash-alt"></i>
 								Delete
 							</button>
 						</th>
