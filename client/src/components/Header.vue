@@ -13,7 +13,7 @@
 				<span class="font1">&nbsp;|&nbsp;</span>
 				<span class="font1"><router-link :to="{ name: 'homepage' }"><span style="color: white"><b>Homepage</b></span></router-link></span>
 				<span class="font1">&nbsp;|&nbsp;</span>
-				<span class="font1"><router-link :to="{ name: 'blogs' }"><span style="color: white"><b>Menu</b></span></router-link></span>
+				<span class="font1"><router-link :to="{ name: 'products' }"><span style="color: white"><b>Menu</b></span></router-link></span>
 				<span class="font1">&nbsp;|&nbsp;</span>
 				<span class="font1"><router-link :to="{ name: 'orders' }"><span style="color: white"><b>Order</b></span></router-link></span>
 				<span class="font1">&nbsp;|&nbsp;</span>

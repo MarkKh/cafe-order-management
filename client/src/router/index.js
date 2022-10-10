@@ -19,6 +19,11 @@ import OrderCreate from '@/components/Orders/CreateOrder'
 import OrderEdit from '@/components/Orders/EditOrder'
 import OrderShow from '@/components/Orders/ShowOrder'
 
+import ProductIndex from '@/components/Products/Index'
+import ProductCreate from '@/components/Products/CreateProduct'
+import ProductEdit from '@/components/Products/EditProduct'
+import ProductShow from '@/components/Products/ShowProduct'
+
 import CommentIndex from '@/components/Comments/Index'
 
 import Upload from '@/components/Utils/Upload'
@@ -106,6 +111,26 @@ export default new Router({
       path: '/order/:orderId',
       name: 'order',
       component: OrderShow
+    },
+    {
+      path: '/products',
+      name : 'products',
+      component: ProductIndex
+    },
+    {
+      path: '/product/create',
+      name: 'product-create',
+      component: ProductCreate
+    },
+    {
+      path: '/product/edit/:productId',
+      name: 'product-edit',
+      component: ProductEdit
+    },
+    {
+      path: '/product/:productId',
+      name: 'product',
+      component: ProductShow
     }
   ]
 })

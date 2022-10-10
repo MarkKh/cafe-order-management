@@ -25,8 +25,8 @@
 											required
 										>
 											<option disabled value="">Choose a product</option>
-											<option v-for="blog in blogs" v-bind:key="blog.id">
-												{{ blog.title + "  " + blog.content + "  Baht" }}
+											<option v-for="product in products" v-bind:key="product.id">
+												{{ product.name + "  " + product.price + "  Baht" }}
 											</option>
 										</select>
 									</div>
@@ -132,7 +132,7 @@ import BlogsService from "@/services/BlogsService";
 export default {
 	data() {
 		return {
-			blogs: [],
+			products: [],
 			order: {
 				quantity: "",
 				product_name: "",
